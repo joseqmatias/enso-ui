@@ -1,7 +1,7 @@
 {
   "name": "enso-ui",
   "theme": "ui",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A minimalist dark UI theme with material design nuances based on One Dark UI.",
   "keywords": [
     "dark",
