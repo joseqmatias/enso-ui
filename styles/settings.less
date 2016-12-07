@@ -143,7 +143,12 @@
 	}
 
 	.install-button {
-		.btn-variant(@accent-bg-color);
+		.btn-variant(@background-color-info);
+		color: #FFF !important;
+
+		&::before {
+			color: #FFF !important;
+		}
 	}
 
     .uninstall-button {
@@ -164,6 +169,11 @@
 
 	.search-container .btn {
 		font-size: @ui-input-size;
+
+		&.selected {
+			.btn-variant(@background-color-info);
+			color: #FFF !important;
+		}
 	}
 
 	.alert-info {
