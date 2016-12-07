@@ -31,7 +31,6 @@
 @text-color-highlight:  lighten(@text-color, 20%);
 @text-color-selected:   white;
 
-// @text-color-info:    hsl(219,  79%, 66%);
 @text-color-info:    @primary-color;
 @text-color-success: lighten(@primary-color, 20%);
 @text-color-warning: lighten(@yellow, 30%);
@@ -40,7 +39,7 @@
 
 // Background -----------------
 @background-color-info:    @primary-color;
-@background-color-success: @primary-color;
+@background-color-success: lighten(@primary-color, 15%);
 @background-color-warning: @yellow;
 @background-color-error:   @red;
 
@@ -75,7 +74,7 @@
 @overlay-background-color:         @level-2-color;
 @overlay-border-color:             @base-border-color;
 
-@button-background-color:          @level-1-color;
+@button-background-color:          @ui-bg;
 @button-background-color-hover:    lighten(@button-background-color, 2%);
 @button-background-color-selected: @accent-bg-color;
 @button-border-color:              @base-border-color;

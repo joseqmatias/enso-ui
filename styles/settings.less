@@ -23,8 +23,6 @@
 		position: relative;
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
-		// border-width: 0 1px 0 0;
-		// border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
 		background: @level-2-color;
         z-index: 1;
         border-right: none;
@@ -86,6 +84,15 @@
 
 	.section .section-heading {
 		margin-bottom: @ui-padding/1.5;
+		font-size: 1.5em;
+
+		.btn {
+			font-size: .7em;
+		}
+
+		.update-all-button {
+			.btn-variant(@background-color-success);
+		}
 	}
 
 	.sub-section-heading.icon:before,
@@ -127,6 +134,10 @@
 		padding-bottom: 0;
 	}
 
+	select.form-control {
+		background: @enso2;
+	}
+
 	.update-all-button {
 		font-size: .75em;
 	}
@@ -136,7 +147,7 @@
 	}
 
     .uninstall-button {
-        .btn-variant(@background-color-error);
+        // .btn-variant(@background-color-error);
     }
 
 	input[type="checkbox"] {
@@ -153,6 +164,18 @@
 
 	.search-container .btn {
 		font-size: @ui-input-size;
+	}
+
+	.alert-info {
+        color: @primary-color;
+        border: none;
+        background: @enso2;
+
+        &.icon::before {
+            color: inherit;
+            position: relative;
+            top: 1px;
+        }
 	}
 
 	// CUSTOM
