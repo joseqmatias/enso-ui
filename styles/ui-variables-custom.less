@@ -1,4 +1,3 @@
-
 // ONE dark UI colors
 // ----------------------------------------------
 
@@ -66,7 +65,8 @@
 @accent-luma:             luma( hsl(@ui-hue, 50%, 50%) ); // get lightness of current hue
 
 // used for marker, inputs (smaller things)
-@accent-color:            mix( hsv( @ui-hue, 100%, 66%), hsl( @ui-hue, 100%, 70%), @accent-luma ); // mix hsv + hsl (favor mostly hsl)
+@accent-color: @primary-color;
+// @accent-color:            mix( hsv( @ui-hue, 100%, 66%), hsl( @ui-hue, 100%, 70%), @accent-luma ); // mix hsv + hsl (favor mostly hsl)
 @accent-text-color:       contrast(@accent-color, hsl(@ui-hue,100%,10%), #fff, 25% );
 
 // used for button, tooltip (larger things)
@@ -106,8 +106,8 @@
 
 @tree-view-background-selected-color: lighten(@level-3-color, 5%);
 
-@tooltip-background-color:          @accent-bg-color;
-@tooltip-text-color:                @accent-bg-text-color;
+@tooltip-background-color:          @primary-color;
+@tooltip-text-color:                #FFF;
 @tooltip-text-key-color:            @tooltip-background-color;
 @tooltip-background-key-color:      @tooltip-text-color;
 
@@ -115,7 +115,8 @@
 // Sizes (Custom) -----------------
 
 @ui-size:                 1em;
-@ui-input-size:           @ui-size*1.15;
+@ui-input-size:           @ui-size;
+// @ui-input-size:           @ui-size*1.15;
 @ui-padding:              @ui-size*1.5;
 @ui-padding-pane:         @ui-size*.5;
 @ui-padding-icon:         @ui-padding/3.3;

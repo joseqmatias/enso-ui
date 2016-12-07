@@ -19,12 +19,15 @@
 	// Menu ------------------------------
 
 	.config-menu {
+		.z-depth-3;
 		position: relative;
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
-		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
+		// border-width: 0 1px 0 0;
+		// border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
 		background: @level-2-color;
+        z-index: 1;
+        border-right: none;
 
 		.btn {
 			white-space: initial;
@@ -70,6 +73,15 @@
 	}
 
 
+	.panels-menu {
+        li {
+            a {
+				.transition-03;
+                line-height: 1.7;
+            }
+        }
+	}
+
 	// Titles ------------------------------
 
 	.section .section-heading {
@@ -86,7 +98,9 @@
 	// Cards ------------------------------
 
 	.package-card {
+		font-size: @ui-size * 1.1;
 		padding: @ui-padding;
+
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
 			&:before {
@@ -121,6 +135,10 @@
 		.btn-variant(@accent-bg-color);
 	}
 
+    .uninstall-button {
+        .btn-variant(@background-color-error);
+    }
+
 	input[type="checkbox"] {
 		background-color: @background-color-selected;
 		&:active,
@@ -137,4 +155,13 @@
 		font-size: @ui-input-size;
 	}
 
+	// CUSTOM
+	.link {
+		.transition-03;
+		color: @primary-color;
+
+		&:hover {
+			color: @primary-color;
+		}
+	}
 }

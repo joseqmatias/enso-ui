@@ -9,6 +9,21 @@
 // Source: https://github.com/atom/atom/blob/master/static/variables/ui-variables.less
 // ----------------------------------------------
 
+// Colors
+
+@enso1: #262831;
+@enso2: #31343F;
+
+
+@green: #1DB954;
+@yellow: #FFD300;
+@red: #FA4E3B;
+
+@black-a10: rgba(0,0,0,0.1);
+@white-a10: rgba(255,255,255,0.1);
+
+@ui-bg: @enso1;
+@primary-color: @green;
 
 // Text -----------------
 @text-color:            @ui-fg;
@@ -16,27 +31,29 @@
 @text-color-highlight:  lighten(@text-color, 20%);
 @text-color-selected:   white;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+// @text-color-info:    hsl(219,  79%, 66%);
+@text-color-info:    @primary-color;
+@text-color-success: lighten(@primary-color, 20%);
+@text-color-warning: lighten(@yellow, 30%);
+@text-color-error:   lighten(@red, 5%);
 
 
 // Background -----------------
-@background-color-info:    hsl(208, 88%, 48%);
-@background-color-success: hsl(132, 58%, 40%);
-@background-color-warning: hsl( 42, 88%, 36%);
-@background-color-error:   hsl(  5, 64%, 50%);
+@background-color-info:    @primary-color;
+@background-color-success: @primary-color;
+@background-color-warning: @yellow;
+@background-color-error:   @red;
 
 @background-color-highlight: lighten(@base-background-color, 4%);
 @background-color-selected:  lighten(@base-background-color, 8%);
 
-@app-background-color: @level-3-color;
+@app-background-color: @ui-bg;
 
 
 // Base -----------------
 @base-background-color: @ui-bg;
-@base-border-color:     @ui-border;
+// @base-border-color:     @ui-border;
+@base-border-color:     @black-a10;
 
 
 // Components -----------------
@@ -63,13 +80,13 @@
 @button-background-color-selected: @accent-bg-color;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:         @level-3-color;
+@tab-bar-background-color:         @black-a10;
 @tab-bar-border-color:             @base-border-color;
-@tab-background-color:             @level-3-color;
-@tab-background-color-active:      @level-2-color;
+@tab-background-color:             @enso2;
+@tab-background-color-active:      @base-background-color;
 @tab-border-color:                 @base-border-color;
 
-@tree-view-background-color:       @level-3-color;
+@tree-view-background-color:       @ui-bg;
 @tree-view-border-color:           @base-border-color;
 
 @ui-site-color-1: hsl(208, 100%, 50%); // blue
@@ -94,4 +111,4 @@
 
 
 // Font -----------------
-@font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'Inconsolata', 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

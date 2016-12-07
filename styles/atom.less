@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	// -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -9,10 +10,7 @@ html {
 atom-workspace {
 	background-color: @app-background-color;
 }
-
-
 // Scrollbars ------------------------------------
-
 .scrollbars-visible-always {
 	::-webkit-scrollbar {
 		width: 10px;
@@ -50,18 +48,19 @@ atom-workspace {
 		::-webkit-scrollbar-track {
 			background: @scrollbar-background-color-editor;
 		}
+
 		::-webkit-scrollbar-corner {
 			background: @scrollbar-background-color-editor;
 		}
+
 		::-webkit-scrollbar-thumb {
 			border-color: @scrollbar-background-color-editor;
 			background: @scrollbar-color-editor;
 		}
 	}
 }
-
 // TODO: Move to a better place, not sure where it gets used
 .caret {
-  border-top: 5px solid #fff;
-  margin-top: -1px;
+	border-top: 5px solid #fff;
+	margin-top: -1px;
 }
