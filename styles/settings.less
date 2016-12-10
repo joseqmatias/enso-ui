@@ -12,8 +12,6 @@
 @ms_1: @ui-size * 0.889;
 @ms_2: @ui-size * 0.790;
 
-
-
 .settings-view {
 
 	// Menu ------------------------------
@@ -105,7 +103,8 @@
 	// Cards ------------------------------
 
 	.package-card {
-		font-size: @ui-size * 1.1;
+		.transition-03;
+		font-size: @ui-size;
 		padding: @ui-padding;
 
 		.meta-controls .status-indicator {
@@ -128,14 +127,20 @@
 	}
 
 	.form-control {
-		font-size: @ui-size*1.25;
+		font-size: @ui-size;
 		height: @ui-line-height;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 
 	select.form-control {
+		.transition-03;
 		background: @enso2;
+
+		&:hover, &:active {
+			background: @enso2;
+			color: contrast(@enso2, white, hsl(0,0%,20%), 22% );
+		}
 	}
 
 	.update-all-button {
@@ -144,15 +149,23 @@
 
 	.install-button {
 		.btn-variant(@background-color-info);
-		color: #FFF !important;
+		color: @text-color !important;
 
 		&::before {
-			color: #FFF !important;
+			color: @text-color !important;
+		}
+
+		&:hover, &:focus {
+			color: @text-color-highlight !important;
+
+			&::before {
+				color: @text-color-highlight !important;
+			}
 		}
 	}
 
     .uninstall-button {
-        // .btn-variant(@background-color-error);
+		
     }
 
 	input[type="checkbox"] {
@@ -196,5 +209,9 @@
 		&:hover {
 			color: @primary-color;
 		}
+	}
+
+	atom-text-editor[mini] {
+		font-size: 14px;
 	}
 }

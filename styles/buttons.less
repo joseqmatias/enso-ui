@@ -5,18 +5,15 @@
     color: @text-color;
     text-shadow: none;
     border: @btn-border;
-    background-color: @color;
-    background-image: linear-gradient(lighten(@color, 2%), @color);
+    background: darken(@enso1, 2%);
 
     &:focus {
-        //.focus(); // disabled for now, since :focus styles stay even after releasing mouse.
         outline: none;
     }
 
     &:focus,
     &:hover {
         color: @text-color-highlight;
-        background-image: linear-gradient(lighten(@hover-color, 2%), @hover-color);
     }
 
     &:active {
@@ -59,6 +56,10 @@
     padding: @btn-padding;
     font-size: @ui-size;
     line-height: @ui-line-height;
+
+    &::before {
+        .transition-03;
+    }
 }
 
 .btn,
